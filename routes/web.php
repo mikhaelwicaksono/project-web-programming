@@ -22,6 +22,14 @@ Route::get('/signin', function (){
 Route::get('/signup', function (){
     return view('signuppage');
 })->name('Sign Up Page');
-Route::get('/home', function (){
-    return view('home');
-})->name('Home Page');
+
+Route::get('/home', [ProductController::class, 'home'])->name('Home Page');
+Route::get('/mycart', function (){
+    return view('viewcart');
+})->name('View Cart');
+Route::get('/checkout', function (){
+    return view('checkout');
+})->name('Check Out');
+Route::get('/product', function (){
+    return view('detail-product');
+})->name('Detail Product');
