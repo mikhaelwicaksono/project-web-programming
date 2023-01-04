@@ -15,12 +15,11 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('profile_id');
-            $table->foreign('profile_id')->references('profile_id')->on('profiles')->onUpdate('cascade')->onDelete('cascade');
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('product_id')->on('products')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('profile_id')->nullable()->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('product_id')->nullable()->cascadeOnUpdate()->cascadeOnDelete();
             $table->date('date');
             $table->integer('pieces');
+            $table ->timestamps();
         });
     }
 
