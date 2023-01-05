@@ -44,13 +44,11 @@ Route::middleware(['User'])->group(function () {
 //     })->name('Sign Out');
 // });
 // Route::middleware(['isMember'])->group(function () {
-Route::get('/member-home', [ProductController::class, 'homePage'])->name('Home Member');
+Route::get('/member-home', [ProductController::class, 'homeMemberPage'])->name('Home Member');
 // });
 
 // Route::middleware(['isAdmin'])->group(function () {
-Route::get('/admin-home', function () {
-    return view('homeAdmin');
-})->name('Home Admin');
+Route::get('/admin-home', [ProductController::class, 'homeAdminPage'])->name('Home Admin');
 
 
 

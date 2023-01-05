@@ -15,11 +15,17 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function homePage()
+    public function homeMemberPage()
     {
         $dataProduct = Product::all();
 
         return view('homeMember')->with('data', $dataProduct);
+    }
+    public function homeAdminPage()
+    {
+        $dataProduct = Product::all();
+
+        return view('homeAdmin')->with('data', $dataProduct);
     }
 
     //  public function index()
