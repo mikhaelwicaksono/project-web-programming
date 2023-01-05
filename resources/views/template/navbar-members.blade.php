@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ Route('Home Page') }}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{{ Route('Home Member') }}">Home</a>
                     </li>
 
                     <li class="nav-item">
@@ -31,7 +31,9 @@
                 </ul>
                 <form class="d-flex my-2 my-lg-0" action="">
                     @csrf
-                    <button class="btn btn-outline-info" type="submit">Sign Out</button>
+                    {{-- //{{ route('Sign Out') }} --}}
+                    <button class="btn btn-outline-info" type="submit"><a href="/"></a>Sign
+                        Out</button>
                 </form>
                 </ul>
             </div>

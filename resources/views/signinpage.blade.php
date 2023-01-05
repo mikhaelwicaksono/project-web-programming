@@ -7,7 +7,7 @@
             <div class="col-lg-4">
                 <div class="card mt-3">
                     <div class="card-body" style="background-color: #fddedf">
-                        <form method="POST" action="{{ route('Sign In For User') }}">
+                        <form method="POST" action="{{ route('Sign In') }}">
                             @csrf
                             <div class="title text-center mb-4">
                                 <h1>Sign In</h1>
@@ -43,4 +43,9 @@
                             <div id="button" class="form-text text-center" style="height: 250px;">Not Register yet? <a
                                     href="{{ route('Sign Up Page') }}">Register here</a></div>
                         </form>
-                    @endsection
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

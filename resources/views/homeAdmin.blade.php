@@ -1,7 +1,7 @@
 @extends('template.master')
-@section('title', 'home')
+@section('title', 'Home')
 @section('content')
-    @include('template.navbar-members')
+    @include('template.navbar-admin')
     @foreach ($products as $p)
         <div class="container">
             <h1 class="text-center" style="font-family: consolas">Find Your Best Clothes Here!</h1>
